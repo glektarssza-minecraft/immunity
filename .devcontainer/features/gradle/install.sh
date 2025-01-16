@@ -8,7 +8,7 @@ mkdir -p /opt/gradle/ && \
 # Ensure Gradle install location is empty.
 rm -rf /opt/gradle/* && \
 # Download version of Gradle to install.
-wget https://services.gradle.org/versions/current -O - | jq --raw-output .downloadUrl | xargs wget --directory-prefix=/opt/gradle/ && \
+wget https://services.gradle.org/versions/current -O - | jq --raw-output .version | xargs -I V wget --directory-prefix=/opt/gradle/ https://services.gradle.org/distributions/gradle-V-all.zip  && \
 # Unpack version of Gradle to install.
 wget https://services.gradle.org/versions/current -O - | jq --raw-output .version | xargs -I V 7z x -o/opt/gradle/ gradle-V-all.zip && \
 # Remove downloaded Gradle zip.
