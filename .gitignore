@@ -11,7 +11,6 @@
 ## Vim ##
 ### Swap ###
 [._]*.s[a-v][a-z]
-!*.svg
 [._]*.sw[a-p]
 [._]*.s[a-rt-v][a-z]
 [._]*.ss[a-gi-z]
@@ -31,8 +30,27 @@ tags
 ### Undo Persistence ###
 [._]*.un~
 
+# Eclipse #
+## General ##
+.project
+.classpath
+.settings/
+
 # Logs #
 *.log*
 
 # Environment #
+## General ##
 .envrc
+
+# Cache #
+## Gradle ##
+.gradle/
+
+# Artifacts #
+## Gradle ##
+build/
+
+# Debugging #
+## ForgeGradle ##
+run/
