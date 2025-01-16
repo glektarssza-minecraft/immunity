@@ -20,6 +20,7 @@
         },
         "./features/apt-zsh": {},
         "./features/apt-p7zip-full": {},
+        "./features/pre-commit": {},
         "./features/oh-my-zsh": {
             "theme": "blinks_custom",
             "plugins": "debian git git-lfs"
@@ -33,6 +34,7 @@
     },
     "overrideFeatureInstallOrder": [
         "./features/create-user",
-        "./features/oh-my-zsh"
+        "./features/oh-my-zsh",
+        "./features/pre-commit"
     ]
 }
