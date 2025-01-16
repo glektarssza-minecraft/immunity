@@ -7,12 +7,15 @@ cleanroom
 cleanroommc
 configanytime
 coremod
+decomp
+decompilation
 deobf
 dfml
 dmixin
 dsun
 fmlat
 foojay
+gradlew
 gson
 gtnewhorizons
 gtnh
