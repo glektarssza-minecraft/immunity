@@ -16,8 +16,8 @@ wget https://services.gradle.org/versions/current -O - | jq --raw-output .versio
 # Move unpacked files to main install location.
 wget https://services.gradle.org/versions/current -O - | jq --raw-output .version | xargs -I V mv /opt/gradle/gradle-V/* /opt/gradle/ && \
 # Add Gradle path to .zshrc.
-su ${_REMOTE_USER} -c "if [ -f ~${_REMOTE_USER}/.zshrc ]; then echo 'export PATH=\"/opt/gradle/bin:\\\$PATH\"' >> ~${_REMOTE_USER}/.zshrc; fi"  && \
+su ${_REMOTE_USER} -c "if [ -f ~${_REMOTE_USER}/.zshrc ]; then echo 'export PATH=\"/opt/gradle/bin:\\\$PATH\"' >> ~${_REMOTE_USER}/.zshrc; fi" && \
 # Add Gradle path to .bashrc.
-su ${_REMOTE_USER} -c "if [ -f ~${_REMOTE_USER}/.bashrc ]; then echo 'export PATH=\"/opt/gradle/bin:\\\$PATH\"' >> ~${_REMOTE_USER}/.bashrc; fi"  && \;
+su ${_REMOTE_USER} -c "if [ -f ~${_REMOTE_USER}/.bashrc ]; then echo 'export PATH=\"/opt/gradle/bin:\\\$PATH\"' >> ~${_REMOTE_USER}/.bashrc; fi" && \
 # Add Gradle path to .profile if no .bashrc/.zshrc exists.
 su ${_REMOTE_USER} -c "if [ -f ~${_REMOTE_USER}/.profile -a ! -f ~${_REMOTE_USER}/.zshrc -a ! -f ~${_REMOTE_USER}/.bashrc ]; then echo 'export PATH=\"/opt/gradle/bin:\\\$PATH\"' >> ~${_REMOTE_USER}/.profile; fi";
