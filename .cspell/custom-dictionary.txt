@@ -23,6 +23,7 @@ mcmod
 minecraftforge
 mixinbooter
 mkdirs
+modid
 mojang
 refmap
 reobf
