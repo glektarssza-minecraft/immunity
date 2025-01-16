@@ -10,9 +10,9 @@ rm -rf /opt/gradle/* && \
 # Download version of Gradle to install.
 wget https://services.gradle.org/versions/current -O - | jq --raw-output .version | xargs -I V wget --directory-prefix=/opt/gradle/ https://services.gradle.org/distributions/gradle-V-all.zip  && \
 # Unpack version of Gradle to install.
-wget https://services.gradle.org/versions/current -O - | jq --raw-output .version | xargs -I V 7z x -o/opt/gradle/ gradle-V-all.zip && \
+wget https://services.gradle.org/versions/current -O - | jq --raw-output .version | xargs -I V 7z x -o/opt/gradle/ /opt/gradle/gradle-V-all.zip && \
 # Remove downloaded Gradle zip.
-wget https://services.gradle.org/versions/current -O - | jq --raw-output .version | xargs -I V rm gradle-V-all.zip && \
+wget https://services.gradle.org/versions/current -O - | jq --raw-output .version | xargs -I V rm /opt/gradle/gradle-V-all.zip && \
 # Move unpacked files to main install location.
 wget https://services.gradle.org/versions/current -O - | jq --raw-output .version | xargs -I V mv /opt/gradle/gradle-V/* /opt/gradle/ && \
 # Add Gradle path to .zshrc.
