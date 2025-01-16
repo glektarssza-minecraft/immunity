@@ -1,3 +1,7 @@
 # Custom Dictionary Words
+foojay
+gtnewhorizons
 jvmargs
+retrofuturagradle
 venv
+gtnh
