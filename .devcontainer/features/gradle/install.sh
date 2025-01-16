@@ -14,7 +14,8 @@ wget https://services.gradle.org/versions/current -O - | jq --raw-output .versio
 # Remove downloaded Gradle zip.
 wget https://services.gradle.org/versions/current -O - | jq --raw-output .version | xargs -I V rm /opt/gradle/gradle-V-all.zip && \
 # Move unpacked files to main install location.
-wget https://services.gradle.org/versions/current -O - | jq --raw-output .version | xargs -I V mv '/opt/gradle/gradle-V/*' /opt/gradle/ && \
+# Remove old unpacked Gradle directory.
+wget https://services.gradle.org/versions/current -O - | jq --raw-output .version | xargs -I V rm -r /opt/gradle/gradle-V/ && \
 # Add Gradle path to .zshrc.
 su ${_REMOTE_USER} -c "if [ -f ~${_REMOTE_USER}/.zshrc ]; then echo 'export PATH=\"/opt/gradle/bin:\$PATH\"' >> ~${_REMOTE_USER}/.zshrc; fi" && \
 # Add Gradle path to .bashrc.
