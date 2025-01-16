@@ -34,6 +34,7 @@
     },
     "overrideFeatureInstallOrder": [
         "./features/create-user",
-        "./features/oh-my-zsh"
+        "./features/oh-my-zsh",
+        "./features/pre-commit"
     ]
 }
