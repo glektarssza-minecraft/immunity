@@ -49,6 +49,7 @@ tags
 
 # Artifacts #
 ## Gradle ##
+bin/
 build/
 
 # Debugging #
