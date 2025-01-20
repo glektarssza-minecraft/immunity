@@ -40,7 +40,7 @@
     "java.format.onType.enabled": false,
     "java.format.settings.profile": "Custom",
     "java.format.settings.url": "https://github.com/glektarssza-minecraft/highres-screenshots/raw/refs/heads/main/formatter.xml",
-    "java.import.generatesMetadataFilesAtProjectRoot": true,
+    "java.import.generatesMetadataFilesAtProjectRoot": false,
     "java.inlayHints.parameterNames.enabled": "none",
     "java.saveActions.cleanup": true,
     "java.saveActions.organizeImports": true,
