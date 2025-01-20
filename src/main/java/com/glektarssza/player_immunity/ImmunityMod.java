@@ -10,7 +10,7 @@ import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
  * The root mod class.
  */
 @Mod(modid = Tags.MOD_ID, name = Tags.MOD_NAME, version = Tags.MOD_VERSION, dependencies = Tags.MOD_DEPENDENCIES)
-public class Immunity {
+public class ImmunityMod {
     /**
      * The logger to use for the mod.
      */
