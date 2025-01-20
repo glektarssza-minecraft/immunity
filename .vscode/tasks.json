@@ -1,0 +1,51 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Setup Workspace",
+            "detail": "Setup the workspace for the first time.",
+            "icon": {
+                "id": "wrench",
+                "color": "terminal.ansiWhite"
+            },
+            "group": {
+                "isDefault": true,
+                "kind": "none"
+            },
+            "dependsOrder": "sequence",
+            "dependsOn": [],
+            "hide": false,
+            "isBackground": false,
+            "promptOnClose": false,
+            "runOptions": {
+                "instanceLimit": 1,
+                "reevaluateOnRerun": true,
+                "runOn": "default"
+            },
+            "type": "shell",
+            "command": "./gradlew",
+            "args": [
+                "clean",
+                "setupDecompWorkspace",
+                "injectTags",
+                "cleanEclipse",
+                "eclipse"
+            ],
+            "windows": {
+                "command": ".\\gradlew.bat"
+            },
+            "options": {},
+            "presentation": {
+                "echo": false,
+                "reveal": "always",
+                "focus": false,
+                "panel": "dedicated",
+                "showReuseMessage": false,
+                "clear": true
+            },
+            "problemMatcher": [
+                "$gradle"
+            ]
+        }
+    ]
+}
