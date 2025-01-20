@@ -2,7 +2,7 @@
     "version": "2.0.0",
     "tasks": [
         {
-            "label": "Setup Workspace",
+            "label": "workspace:setup",
             "detail": "Setup the workspace for the first time.",
             "icon": {
                 "id": "wrench",
@@ -13,7 +13,13 @@
                 "kind": "none"
             },
             "dependsOrder": "sequence",
-            "dependsOn": [],
+            "dependsOn": [
+                "gradle:clean",
+                "gradle:setupDecompWorkspace",
+                "gradle:injectTags",
+                "gradle:cleanEclipse",
+                "gradle:eclipse"
+            ],
             "hide": false,
             "isBackground": false,
             "promptOnClose": false,
@@ -23,25 +29,174 @@
                 "runOn": "default"
             },
             "type": "shell",
-            "command": "./gradlew",
-            "args": [
-                "clean",
-                "setupDecompWorkspace",
-                "injectTags",
-                "cleanEclipse",
-                "eclipse"
-            ],
-            "windows": {
-                "command": ".\\gradlew.bat"
-            },
+            "command": "",
+            "args": [],
             "options": {},
             "presentation": {
                 "echo": false,
-                "reveal": "always",
+                "reveal": "never",
                 "focus": false,
-                "panel": "dedicated",
+                "panel": "shared",
                 "showReuseMessage": false,
                 "clear": true
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "gradle:clean",
+            "detail": "Deletes the build directory.",
+            "dependsOrder": "sequence",
+            "dependsOn": [],
+            "hide": true,
+            "promptOnClose": false,
+            "isBackground": false,
+            "type": "gradle",
+            "id": "${workspaceFolder}clean${workspaceFolderBasename}",
+            "script": "clean",
+            "description": "Deletes the build directory.",
+            "group": "modded minecraft",
+            "project": "${workspaceFolderBasename}",
+            "buildFile": "${workspaceFolder}/build.gradle",
+            "rootProject": "${workspaceFolderBasename}",
+            "projectFolder": "${workspaceFolder}",
+            "workspaceFolder": "${workspaceFolder}",
+            "args": "",
+            "javaDebug": false,
+            "presentation": {
+                "echo": false,
+                "reveal": "silent",
+                "focus": false,
+                "panel": "shared",
+                "showReuseMessage": false,
+                "clear": false
+            },
+            "problemMatcher": [
+                "$gradle"
+            ]
+        },
+        {
+            "label": "gradle:setupDecompWorkspace",
+            "detail": "Prepares everything for mod building in a dev environment.",
+            "dependsOrder": "sequence",
+            "dependsOn": [],
+            "hide": true,
+            "promptOnClose": false,
+            "isBackground": false,
+            "type": "gradle",
+            "id": "${workspaceFolder}setupDecompWorkspace${workspaceFolderBasename}",
+            "script": "setupDecompWorkspace",
+            "description": "Prepares everything for mod building in a dev environment.",
+            "group": "modded minecraft",
+            "project": "${workspaceFolderBasename}",
+            "buildFile": "${workspaceFolder}/build.gradle",
+            "rootProject": "${workspaceFolderBasename}",
+            "projectFolder": "${workspaceFolder}",
+            "workspaceFolder": "${workspaceFolder}",
+            "args": "",
+            "javaDebug": false,
+            "presentation": {
+                "echo": false,
+                "reveal": "silent",
+                "focus": false,
+                "panel": "shared",
+                "showReuseMessage": false,
+                "clear": false
+            },
+            "problemMatcher": [
+                "$gradle"
+            ]
+        },
+        {
+            "label": "gradle:injectTags",
+            "detail": "Inject the mod tags file.",
+            "dependsOrder": "sequence",
+            "dependsOn": [],
+            "hide": true,
+            "promptOnClose": false,
+            "isBackground": false,
+            "type": "gradle",
+            "id": "${workspaceFolder}injectTags${workspaceFolderBasename}",
+            "script": "injectTags",
+            "description": "Inject the mod tags file.",
+            "group": "modded minecraft",
+            "project": "${workspaceFolderBasename}",
+            "buildFile": "${workspaceFolder}/build.gradle",
+            "rootProject": "${workspaceFolderBasename}",
+            "projectFolder": "${workspaceFolder}",
+            "workspaceFolder": "${workspaceFolder}",
+            "args": "",
+            "javaDebug": false,
+            "presentation": {
+                "echo": false,
+                "reveal": "silent",
+                "focus": false,
+                "panel": "shared",
+                "showReuseMessage": false,
+                "clear": false
+            },
+            "problemMatcher": [
+                "$gradle"
+            ]
+        },
+        {
+            "label": "gradle:cleanEclipse",
+            "detail": "Clean all Eclipse files.",
+            "dependsOrder": "sequence",
+            "dependsOn": [],
+            "hide": true,
+            "promptOnClose": false,
+            "isBackground": false,
+            "type": "gradle",
+            "id": "${workspaceFolder}cleanEclipse${workspaceFolderBasename}",
+            "script": "cleanEclipse",
+            "description": "Clean all Eclipse files.",
+            "group": "modded minecraft",
+            "project": "${workspaceFolderBasename}",
+            "buildFile": "${workspaceFolder}/build.gradle",
+            "rootProject": "${workspaceFolderBasename}",
+            "projectFolder": "${workspaceFolder}",
+            "workspaceFolder": "${workspaceFolder}",
+            "args": "",
+            "javaDebug": false,
+            "presentation": {
+                "echo": false,
+                "reveal": "silent",
+                "focus": false,
+                "panel": "shared",
+                "showReuseMessage": false,
+                "clear": false
+            },
+            "problemMatcher": [
+                "$gradle"
+            ]
+        },
+        {
+            "label": "gradle:eclipse",
+            "detail": "Generate all Eclipse files.",
+            "dependsOrder": "sequence",
+            "dependsOn": [],
+            "hide": true,
+            "promptOnClose": false,
+            "isBackground": false,
+            "type": "gradle",
+            "id": "${workspaceFolder}eclipse${workspaceFolderBasename}",
+            "script": "eclipse",
+            "description": "Generate all Eclipse files.",
+            "group": "modded minecraft",
+            "project": "${workspaceFolderBasename}",
+            "buildFile": "${workspaceFolder}/build.gradle",
+            "rootProject": "${workspaceFolderBasename}",
+            "projectFolder": "${workspaceFolder}",
+            "workspaceFolder": "${workspaceFolder}",
+            "args": "",
+            "javaDebug": false,
+            "presentation": {
+                "echo": false,
+                "reveal": "silent",
+                "focus": false,
+                "panel": "shared",
+                "showReuseMessage": false,
+                "clear": false
             },
             "problemMatcher": [
                 "$gradle"
