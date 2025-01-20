@@ -49,7 +49,7 @@
     "java.diagnostic.filter": [
         "**/build/**"
     ],
-    "terminal.integrated.env.linux": {
+    "terminal.integrated.env.windows": {
         "JAVA_HOME": "C:/Program Files/Eclipse Adoptium/jdk-8.0.432.6-hotspot/"
     },
     "cSpell.ignorePaths": [
