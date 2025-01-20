@@ -20,7 +20,7 @@ public class ImmunityMod {
      * The mod singleton instance.
      */
     @Mod.Instance
-    public static Immunity instance;
+    public static ImmunityMod instance;
 
     /**
      * Handle the Forge Mod Loader pre-initialization event.
