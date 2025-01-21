@@ -19,6 +19,7 @@ gradlew
 gson
 gtnewhorizons
 gtnh
+INBT
 javax
 jvmargs
 mcmeta
