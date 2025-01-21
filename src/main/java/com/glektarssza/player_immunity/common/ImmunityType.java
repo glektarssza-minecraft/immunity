@@ -5,7 +5,8 @@ package com.glektarssza.player_immunity.common;
  */
 public enum ImmunityType {
     /**
-     * Represents immunity to damage before reductions are applied.
+     * Represents immunity to damage before reductions are applied or durability
+     * is deducted from protection sources.
      */
     DAMAGE,
 
