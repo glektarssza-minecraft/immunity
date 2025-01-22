@@ -3,10 +3,12 @@ package com.glektarssza.player_immunity.utils;
 import java.lang.reflect.Type;
 
 import javax.annotation.Nonnull;
+import javax.annotation.Nullable;
 
 import com.google.gson.JsonDeserializationContext;
 import com.google.gson.JsonDeserializer;
 import com.google.gson.JsonElement;
+import com.google.gson.JsonNull;
 import com.google.gson.JsonParseException;
 import com.google.gson.JsonPrimitive;
 import com.google.gson.JsonSerializationContext;
@@ -24,9 +26,11 @@ public class ImmunityTypeSerializer
     // #region Public Methods
 
     @Override
-    @Nonnull
-    public JsonElement serialize(ImmunityType src, Type typeOfSrc,
+    public JsonElement serialize(@Nullable ImmunityType src, Type typeOfSrc,
         JsonSerializationContext context) {
+        if (src == null) {
+            return JsonNull.INSTANCE;
+        }
         return new JsonPrimitive(src.name());
     }
 
