@@ -16,7 +16,7 @@
             "dependsOn": [
                 "gradle:clean",
                 "gradle:setupDecompWorkspace",
-                "gradle:injectTags",
+                "gradle:build",
                 "gradle:cleanEclipse",
                 "gradle:eclipse"
             ],
@@ -28,9 +28,6 @@
                 "reevaluateOnRerun": true,
                 "runOn": "default"
             },
-            "type": "shell",
-            "command": "",
-            "args": [],
             "options": {},
             "presentation": {
                 "echo": false,
