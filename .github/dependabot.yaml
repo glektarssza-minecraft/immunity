@@ -10,3 +10,12 @@ updates:
       day: wednesday
       timezone: Canada/Mountain
       time: "12:00"
+  - directory: /
+    package-ecosystem: github-actions
+    labels:
+      - Dependency
+    schedule:
+      interval: weekly
+      day: wednesday
+      timezone: Canada/Mountain
+      time: "12:00"
