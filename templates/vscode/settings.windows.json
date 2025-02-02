@@ -11,9 +11,9 @@
     "[java]": {
         "editor.defaultFormatter": "redhat.java"
     },
-    "java.jdt.ls.java.home": "C:/Program Files/Eclipse Adoptium/jdk-21.0.5.11-hotspot/",
+    "java.jdt.ls.java.home": "C:/Program Files/Eclipse Adoptium/jdk-21.0.6.7-hotspot/",
     "java.jdt.ls.vmargs": "-XX:+UseParallelGC -XX:GCTimeRatio=4 -XX:AdaptiveSizePolicyWeight=90 -Dsun.zip.disableMemoryMapping=true -Xmx4G -Xms100m -Xlog:disable",
-    "java.import.gradle.java.home": "C:/Program Files/Eclipse Adoptium/jdk-8.0.432.6-hotspot/",
+    "java.import.gradle.java.home": "C:/Program Files/Eclipse Adoptium/jdk-8.0.442.6-hotspot/",
     "java.completion.enabled": true,
     "java.completion.importOrder": [
         "#",
@@ -50,7 +50,7 @@
         "**/build/**"
     ],
     "terminal.integrated.env.windows": {
-        "JAVA_HOME": "C:/Program Files/Eclipse Adoptium/jdk-8.0.432.6-hotspot/"
+        "JAVA_HOME": "C:/Program Files/Eclipse Adoptium/jdk-8.0.442.6-hotspot/"
     },
     "cSpell.ignorePaths": [
         "vscode-extension",
